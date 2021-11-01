@@ -1,4 +1,5 @@
 import './Header.css';
+import '../Search/Search';
 
 const Header = () => {
 
@@ -8,6 +9,7 @@ const Header = () => {
       <h1>
         New York Times Movie Reviews
       </h1>
+      <Search />
     </header>
   )
 }
