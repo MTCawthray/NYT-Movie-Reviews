@@ -1,7 +1,7 @@
 import './Header.css';
-import '../Search/Search';
+import Search from '../Search/Search';
 
-const Header = () => {
+const Header = ({ findReviews }) => {
 
 
   return (
@@ -9,7 +9,7 @@ const Header = () => {
       <h1>
         New York Times Movie Reviews
       </h1>
-      <Search />
+      <Search findReviews={findReviews} />
     </header>
   )
 }
