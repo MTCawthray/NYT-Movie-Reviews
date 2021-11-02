@@ -10,8 +10,7 @@ function App() {
 
   const findReviews = (searchQuery) => {
     getMovieReview(searchQuery)
-      .then(data => console.log('data from GET', data.results))
-      // .then(data => )
+      .then(data => setReviews(data.results))
       .catch(error => console.log('error from GET', error))
   }
 
@@ -20,7 +19,7 @@ function App() {
       <Header
         findReviews={findReviews}
       />
-      <DisplayArea/>
+      <DisplayArea results={reviews} />
     </div>
   );
 }
