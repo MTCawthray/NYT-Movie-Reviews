@@ -19,7 +19,10 @@ function App() {
       <Header
         findReviews={findReviews}
       />
-      <DisplayArea results={reviews} />
+      <section className="content-holder">
+        <DisplayArea results={reviews} />
+
+      </section>
     </div>
   );
 }

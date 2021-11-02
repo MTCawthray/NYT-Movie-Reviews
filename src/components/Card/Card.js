@@ -8,7 +8,7 @@ const Card = ({ title, img, headline, link, publicationDate, summary }) => {
         <h3 className="title">
           {title}
         </h3>
-        {img ? <img src={img.src} alt={title + ' thumbnail'} className={img.type} /> : <p>no photo available</p>}
+        {img && <img src={img.src} alt={title + ' thumbnail'} className={img.type} />}
         <p className="headline" >
           {headline}
         </p>
