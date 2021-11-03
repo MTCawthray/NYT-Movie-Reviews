@@ -1,14 +1,21 @@
 import './App.css';
-import { useState } from 'react';
-import { getMovieReview } from '../../utils.js';
+import { useState, useEffect } from 'react';
+import { getMovieReview, getCriticsPicks } from '../../utils.js';
 import Header from '../Header/Header';
 import DisplayArea from '../DisplayArea/DisplayArea';
 import Card from '../Card/Card';
+import logo from '../../assets/nyt-logo.jpg'
 
 function App() {
 
   const [reviews, setReviews] = useState([])
   const [selectedReview, setSelectedReview] = useState(null)
+
+  useEffect(() => {
+    getCriticsPicks()
+    .then(data => setReviews(data.results))
+    .catch(error => console.log(error));
+  }, [])
 
   const selectReview = (target) => {
 
@@ -39,10 +46,10 @@ function App() {
           results={reviews} 
           select={selectReview}
         />
-        {selectedReview && (
+        {selectedReview ? (
         <Card
           selectedReview={selectedReview}
-        />)}
+        />) : <img src={logo} alt="nyt logo" className="greeting" /> }
       </section>
     </div>
   );

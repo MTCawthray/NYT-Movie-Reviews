@@ -4,12 +4,19 @@
 }
 
 h1 {
-  font-family: 'ChomskyRegular';
-  font-weight: normal;
+  font-family: 'Roboto Slab', serif;  
+  font-weight: 900;
   font-style: normal;
   font-size: xxx-large;
 }
 
+.greeting {
+  opacity: 25%; 
+  height: 80vh; 
+  margin: 0 9%;
+}
+
 .content-holder {
   display: flex;
+  align-items: center;
 }
