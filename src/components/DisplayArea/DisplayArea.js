@@ -3,7 +3,6 @@ import './DisplayArea.css';
 const DisplayArea = ({ results, select }) => {
 
   const makeCards = results.map(result => {
-      console.log('img url test in display area', result)
       return (
         <li 
         className="review-snippet"
