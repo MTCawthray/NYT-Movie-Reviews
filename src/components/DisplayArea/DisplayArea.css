@@ -7,19 +7,27 @@
   border-right: 1px solid black;
   overflow: scroll;
   padding: 10px;
+  text-align: left;
+}
+
+.list-info {
+  margin: 1vh 0;
 }
 
 .snippet-holder {
   display: flex;
+  flex-direction: column;
   height: 100%;
   overflow-y: scroll;
 }
 
 li {
   list-style-type: none;
+  border-bottom: 1px solid #80808036;
 }
 
 li:hover {
   cursor: pointer;
-  font-size: large;
+  font-weight: 500;
+  background-color: #80808036;
 }
