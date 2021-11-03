@@ -3,10 +3,25 @@ import { useState } from 'react';
 import { getMovieReview } from '../../utils.js';
 import Header from '../Header/Header';
 import DisplayArea from '../DisplayArea/DisplayArea';
+import Card from '../Card/Card';
 
 function App() {
 
   const [reviews, setReviews] = useState([])
+  const [selectedReview, setSelectedReview] = useState(null)
+
+  const selectReview = (target) => {
+
+    reviews.find(review => {
+      // console.log(review.headline, target)
+      if (target.id === review.headline) {
+        setSelectedReview(review);
+      }
+      console.log('did not match')
+      return
+    })
+
+  }
 
   const findReviews = (searchQuery) => {
     getMovieReview(searchQuery)
@@ -19,7 +34,16 @@ function App() {
       <Header
         findReviews={findReviews}
       />
-      <DisplayArea results={reviews} />
+      <section className="content-holder">
+        <DisplayArea 
+          results={reviews} 
+          select={selectReview}
+        />
+        {selectedReview && (
+        <Card
+          selectedReview={selectedReview}
+        />)}
+      </section>
     </div>
   );
 }

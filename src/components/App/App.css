@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: georgia;
 }
 
 h1 {
@@ -7,4 +8,8 @@ h1 {
   font-weight: normal;
   font-style: normal;
   font-size: xxx-large;
+}
+
+.content-holder {
+  display: flex;
 }
