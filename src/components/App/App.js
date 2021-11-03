@@ -4,6 +4,7 @@ import { getMovieReview, getCriticsPicks } from '../../utils.js';
 import Header from '../Header/Header';
 import DisplayArea from '../DisplayArea/DisplayArea';
 import Card from '../Card/Card';
+import logo from '../../assets/nyt-logo.jpg'
 
 function App() {
 
@@ -45,10 +46,10 @@ function App() {
           results={reviews} 
           select={selectReview}
         />
-        {selectedReview && (
+        {selectedReview ? (
         <Card
           selectedReview={selectedReview}
-        />)}
+        />) : <img src={logo} alt="nyt logo" className="greeting" /> }
       </section>
     </div>
   );
