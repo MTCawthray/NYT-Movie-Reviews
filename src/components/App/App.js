@@ -11,13 +11,10 @@ function App() {
   const [selectedReview, setSelectedReview] = useState(null)
 
   const selectReview = (target) => {
-    console.log(target)
-    setSelectedReview(null);
 
     reviews.find(review => {
       // console.log(review.headline, target)
       if (target.id === review.headline) {
-        console.log('match!')
         setSelectedReview(review);
       }
       console.log('did not match')
