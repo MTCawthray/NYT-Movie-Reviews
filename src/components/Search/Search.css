@@ -1,0 +1,13 @@
+.search-bar {
+  height: 1.5em;
+  width: 13vw;
+}
+
+.submit-btn {
+  height: 1.85em;
+  padding: 0 1vw;
+  background-color: black;
+  color: white;
+  border: none;
+  margin: 0 1vw;
+}
