@@ -1,11 +1,28 @@
 .card {
   /* border: 1px solid black; */
-  width: 20vw;
-  height: fit-content;
+  height: 70vh;
+  width: 50vw;
   margin: 10px;
+  float: right;
 }
 
 .mediumThreeByTwo210 {
   height: 140px;
   width: 210px;
+}
+
+.title-rating-holder {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.movie-strong {
+  font-size: larger;
+  font-weight: 400;
+}
+
+.movie-italic {
+  font-size: medium;
+  font-weight: 200;
 }

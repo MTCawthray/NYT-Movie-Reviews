@@ -8,3 +8,7 @@ h1 {
   font-style: normal;
   font-size: xxx-large;
 }
+
+.content-holder {
+  display: flex;
+}
