@@ -21,6 +21,10 @@ const Card = ({ selectedReview }) => {
     <h3 className="headline">
       {headline} written by {byline}
     </h3>
+    <p className="summary-holder">
+      <strong>Summary: </strong>
+      {summary_short}
+    </p>
     <h3 className="movie-italic">
       published on {publication_date}. updated on {date_updated}.
     </h3> 
@@ -29,11 +33,6 @@ const Card = ({ selectedReview }) => {
         {link.suggested_link_text}
       </a>
     </div>
-
-    <p className="summary-holder">
-      <strong>Summary: </strong>
-      {summary_short}
-    </p>
     
     </article>
   )
