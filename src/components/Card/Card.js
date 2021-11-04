@@ -11,7 +11,7 @@ const Card = ({ selectedReview }) => {
           {display_title}
         </h2>
         <p>
-          Rated: {mpaa_rating} | 
+          Rated: {mpaa_rating}  
         </p>
         <p>
           opened: {opening_date}
@@ -25,14 +25,14 @@ const Card = ({ selectedReview }) => {
         <strong>Summary: </strong>
         {summary_short}
       </p>
-      <h3 className="movie-italic">
-        published on {publication_date}. updated on {date_updated}.
-      </h3> 
       <div className="link-holder">
         <a href={link.url} >
           {link.suggested_link_text}
         </a>
       </div>
+      <h3 className="movie-italic date-info">
+        published on {publication_date}. updated on {date_updated}.
+      </h3> 
     </article> 
   
   )
