@@ -1,6 +1,7 @@
 .card {
   /* border: 1px solid black; */
   height: 70vh;
+  width: 50vw;
   margin: 10px;
   padding: 10px;
   float: right;
@@ -24,6 +25,16 @@
   margin-bottom: 4vh;
 }
 
+.title-rating-holder > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.title-rating-holder > p {
+  margin: 3px;
+  color: grey;
+}
+
 .movie-strong {
   font-size: larger;
   font-weight: bold;
@@ -32,6 +43,7 @@
 .movie-italic {
   font-size: medium;
   font-weight: 200;
+  font-style: italic;
 }
 
 .title-info {
@@ -41,7 +53,18 @@
   margin: 10px;
 }
 
+.date-info {
+  text-align: left;
+  color: grey;
+  font-size: small;
+}
+
 .summary-holder {
+  text-align: left;
+  
+}
+
+.link-holder {
   text-align: left;
   
 }
@@ -52,6 +75,43 @@
   margin: 0;
 }
 
-/* p {
-  margin-right: 10px;
-} */
+a {
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 95vw;
+    height: fit-content;
+  }
+
+  .title-rating-holder {
+    flex-direction: column;
+  }
+
+  .title-info {
+    font-size: x-large;
+    width: 70vw;
+  }
+
+  .mediumThreeByTwo210 {
+    height: auto;
+    width: 80vw;
+    margin: 2vh 0;
+  }
+
+  /* .title-rating-holder > p {
+    margin: 3px;
+    color: grey;
+  } */
+
+  /* .title-rating-holder > h2 {
+    margin: 0;
+    padding: 0;
+  } */
+
+  .movie-italic > h3 {
+    text-align: left;
+    color: grey;
+  }
+}
