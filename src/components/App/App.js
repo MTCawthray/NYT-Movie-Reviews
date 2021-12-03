@@ -10,7 +10,6 @@ function App() {
 
   const [reviews, setReviews] = useState([])
   const [selectedReview, setSelectedReview] = useState(null)
-  const [fetchError, setFetchError] = useState(false)
 
   useEffect(() => {
     getCriticsPicks()
@@ -24,7 +23,6 @@ function App() {
       if (target.id === review.headline) {
         setSelectedReview(review);
       }
-      console.log('did not match')
       return
     })
 
@@ -39,9 +37,9 @@ function App() {
           getCriticsPicks()
             .then(data => setReviews(data.results))
             .catch(error => console.log(error));
-        }
+        } 
       })
-      .catch(error => setFetchError(error))
+      .catch(error => console.log(error))
   }
 
   return (
