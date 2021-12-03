@@ -7,7 +7,7 @@ const Header = ({ findReviews }) => {
   return (
     <header className="header"> 
       <h1>
-        New York Times Movie Reviews
+        <span className="style-font">New York Times</span> | Movie Reviews
       </h1>
       <Search findReviews={findReviews} />
     </header>

@@ -9,6 +9,11 @@ h1 {
   font-size: xxx-large;
 }
 
+.style-font {
+  font-family: 'ChomskyRegular', serif;
+  font-size: xxx-large;
+} 
+
 .greeting {
   opacity: 25%; 
   height: 80vh; 
