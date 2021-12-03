@@ -29,7 +29,7 @@ li {
 li:hover {
   cursor: pointer;
   font-weight: 500;
-  background-color: #80808036;
+  background-color: #567c953a;
 }
 
 @media screen and (max-width: 480px) {
