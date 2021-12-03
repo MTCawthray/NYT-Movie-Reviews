@@ -8,6 +8,8 @@ const DisplayArea = ({ results, select }) => {
         className="review-snippet"
         key={result.date_updated}
         id={result.headline}
+        tabindex="0"
+        onKeyPress={(e) => select(e.target)}
         onClick={(e) => select(e.target)}>
           <div className="snippet-holder" id={result.headline}>
             <p 

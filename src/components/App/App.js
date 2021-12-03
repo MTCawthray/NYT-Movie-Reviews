@@ -20,11 +20,9 @@ function App() {
   const selectReview = (target) => {
 
     reviews.find(review => {
-      // console.log(review.headline, target)
       if (target.id === review.headline) {
         setSelectedReview(review);
       }
-      console.log('did not match')
       return
     })
 
@@ -32,8 +30,16 @@ function App() {
 
   const findReviews = (searchQuery) => {
     getMovieReview(searchQuery)
-      .then(data => setReviews(data.results))
-      .catch(error => console.log('error from GET', error))
+      .then(data => {
+        if(data.results) {
+          setReviews(data.results)
+        } else {
+          getCriticsPicks()
+            .then(data => setReviews(data.results))
+            .catch(error => console.log(error));
+        } 
+      })
+      .catch(error => console.log(error))
   }
 
   return (
